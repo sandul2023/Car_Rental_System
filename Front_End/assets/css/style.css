@@ -69,7 +69,7 @@ header {
 }
 
 #optionList > li > a:hover {
-    color: #0d6efd;
+    color: #f3ef2e;
     /*color: #3B71CA;*/
 }
 
@@ -132,7 +132,7 @@ header > nav {
 }
 
 .modal-header {
-    background: #2626a7;
+    background: #f3ef2e;
     color: white;
 }
 
@@ -185,7 +185,7 @@ header > nav {
 }
 
 #btnUpdateCart:hover {
-    background-color: #1a71ef !important;
+    background-color: #f3ef2e !important;
 }
 
 .carousel-inner > div {
@@ -275,7 +275,7 @@ header > nav {
 
 
 .cars .icon-box:hover::before {
-    background: #89CFF0;
+    background: #f3ef2e;
     top: 0;
     border-radius: 0px;
 }
@@ -334,7 +334,7 @@ header > nav {
     padding: 8px 30px 9px 30px;
     border-radius: 50px;
     transition: 0.5s;
-    background: #87CEEB;
+    background: #f3ef2e;
     border: 2px solid purple;
     color: black;
     position: relative;
@@ -344,7 +344,7 @@ header > nav {
 /*====================== Footer Section ======================*/
 
 body > footer {
-    background: #89CFF0;
+    background: #fac108;
     color: black;
     position: relative;
 }
@@ -795,7 +795,7 @@ tbody {
 }
 
 #header .profile .social-links a:hover {
-    background: #149ddd;
+    background: #f3ef2e;
     color: #fff;
     text-decoration: none;
 }
@@ -859,7 +859,7 @@ tbody {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover > a i {
-    color: #149ddd;
+    color: #f3ef2e;
 }
 
 /* Mobile Navigation */
@@ -872,7 +872,7 @@ tbody {
     font-size: 24px;
     transition: all 0.4s;
     outline: none !important;
-    background-color: #149ddd;
+    background-color: #f3ef2e;
     color: #fff;
     width: 40px;
     height: 40px;

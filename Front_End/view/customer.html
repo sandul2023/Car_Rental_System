@@ -2,9 +2,392 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Customer Page</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/css/all.css">
 </head>
-<body>
+<body class="container-fluid">
+<a href="#" id="scroll_up_btn"><i class="fa-solid fa-arrow-up"></i></a>
 
+<!--Header-->
+<header id="customerPageHeader" class="row position-relative text-black">
+    <nav style="border:none!important;"
+         class="navbar navbar-expand-lg bg-dark border-bottom shadow-lg">
+        <div id="s" class="container-fluid">
+            <h1 class="text-uppercase text-primary mb-1">Easy Car Rental</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul id="optionList" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li id="btnHome" class="nav-item">
+                        <a id="home-nav" class="nav-link header-nav option-nav" aria-current="page" href="#Home">Home</a>
+                    </li>
+
+                    <li id="btnMyBookings" class="nav-item">
+                        <a id="customer-nav" class="nav-link header-nav option-nav" href="#My-Bookings">My Bookings</a>
+                    </li>
+
+                    <li id="btnBookingsStatus" class="nav-item">
+                        <a id="item-nav" class="nav-link header-nav option-nav" href="#Booking-Status">Booking Status</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-6 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button id="btnCustomerProfile" type="button" class="btn btn-outline-dark text-white border-light">My Profile</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--Home page-->
+<main id="customerPage_Home" class="container-fluid">
+    <section class="row justify-content-center">
+        <section id="carsCollection" class="row col-xl-12 col-lg-9 col-md-8 col-12 mb-3">
+            <section class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-5 col-10 text-center" style="margin-bottom: 20px;">
+                    <select id="txtSortingType" class="form-select" aria-label="Default select example" name="type">
+                        <option class="badge text-bg-success" selected disabled>Sorted by</option>
+                        <option>Caar Type</option>
+                        <option>Brand</option>
+                        <option>Fuel Type</option>
+                        <option>Transmission Type</option>
+                        <option>Price</option>
+                        <option>No of Passengers</option>
+                    </select>
+                </div>
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-10 text-center" style="margin-bottom: 19px;">
+                    <button id="btnClearSorting" type="button" class="btn btn-warning" style="padding-left: 24px; padding-right:24px; font-weight:500; ">Clear</button>
+                </div>
+            </section>
+
+            <section id="sortingContainer" class="row justify-content-center">
+                <section id="vehicleTypeRow" class="row col-md-7 justify-content-center">
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carType" type="radio" id="general">
+                        <label class="form-check-label" for="general">General</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carType" type="radio" id="premium">
+                        <label class="form-check-label" for="premium">Premium</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carType" type="radio" id="luxury">
+                        <label class="form-check-label" for="luxury">Luxury</label>
+                    </div>
+                </section>
+
+                <section id="brandRow" class="row col-md-7 justify-content-center">
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carBrand" type="radio" id="suzuki">
+                        <label class="form-check-label" for="suzuki">Suzuki</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;margin-bottom: 15px;">
+                        <input class="form-check-input" name="carBrand" type="radio" id="toyota">
+                        <label class="form-check-label" for="toyota">Toyota</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carBrand" type="radio" id="perodua">
+                        <label class="form-check-label" for="perodua">Perodua</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carBrand" type="radio" id="mercedes">
+                        <label class="form-check-label" for="mercedes">Mercedes</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="carBrand" type="radio" id="BMW">
+                        <label class="form-check-label" for="BMW">BMW</label>
+                    </div>
+                </section>
+
+                <section id="fuelTypeRow" class="row col-md-7 justify-content-center">
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="fuelType" type="radio" id="diesel">
+                        <label class="form-check-label" for="diesel">Diesel</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="fuelType" type="radio" id="petrol">
+                        <label class="form-check-label" for="petrol">Petrol</label>
+                    </div>
+                </section>
+
+                <section id="transmissionTypeRow" class="row col-md-7 justify-content-center">
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="transmissionType" type="radio" id="auto">
+                        <label class="form-check-label" for="auto">Auto</label>
+                    </div>
+
+                    <div class="form-check col-md-4 col-sm-4 col-7 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="transmissionType" type="radio" id="manual">
+                        <label class="form-check-label" for="manual">Manual</label>
+                    </div>
+                </section>
+
+                <section id="priceRow" class="row col-md-9 justify-content-center">
+                    <div class="form-floating mb-3 col-md-5 col-sm-7 col-9">
+                        <input style="padding-top: 1.7rem!important;" type="search" class="form-control" id="txtEnterPrice" placeholder="name@example.com">
+                        <label style="left: 10px!important; width: 98%;" for="txtEnterPrice">Enter Your Price</label>
+                    </div>
+                </section>
+
+                <section id="NoOfPassengersRow" class="row col-md-4 justify-content-center">
+                    <div class="form-check col-md-3 col-sm-4 col-4 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="noOfPassengersCount" type="radio" id="four">
+                        <label class="form-check-label" for="four">4</label>
+                    </div>
+
+                    <div class="form-check col-md-3 col-sm-4 col-4 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="noOfPassengersCount" type="radio" id="six">
+                        <label class="form-check-label" for="six">6</label>
+                    </div>
+
+                    <div class="form-check col-md-3 col-sm-4 col-4 d-flex" style="justify-content: center; gap: 12px;">
+                        <input class="form-check-input" name="noOfPassengersCount" type="radio" id="eight">
+                        <label class="form-check-label" for="eight">8</label>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <!--        ==========================CARS========================  -->
+
+            <section id="cars" class="cars">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Cars</h2>
+                    </div>
+                    <div class="section-title">
+                        <p>GENERAL CARS</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Suzuki%20Alto1.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-dribble"></i> </div>
+                                <h4 class="title"><a href="">Suzuki Alto</a> </h4>
+                                <p class="description">Daily rate : Rs. 2500.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 64,350.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 30.00</p>
+                                <p class="description">Transmission : Manual</p>
+                                <br>
+                                <a href="carBooking.html"><button class="btn btn-outline-primary" type="button">BOOK NOW</button></a>
+                                <!--                            <a href="#loginForm" class="btn-cars scrollto">BOOK NOW</a>-->
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Suzuki%20Alto%20k10%201.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-file"></i> </div>
+                                <h4 class="title"><a href="">Suzuki Alto K10</a> </h4>
+                                <p class="description">Daily rate : Rs. 3000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 71,390.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 35.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <a href="carBooking.html"><button class="btn btn-outline-primary" type="button">BOOK NOW</button></a>
+                                <!--                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>-->
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Suzuki%20Celerio%201.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-dribble"></i> </div>
+                                <h4 class="title"><a href="">Suzuki Celerio</a> </h4>
+                                <p class="description">Daily rate : Rs. 3300.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 77,220.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 35.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                                <!--                            <a href="#loginForm" class="btn-cars scrollto">BOOK NOW</a>-->
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Perodua%20(Daihatsu)%20Axia.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-dribble"></i> </div>
+                                <h4 class="title"><a href="">Perodua (Daihatsu) Axia</a> </h4>
+                                <p class="description">Daily rate : Rs. 3800.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 90,200.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 35.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Toyota%20Prius%20C%20Aqua.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Toyota Prius C/ Aqua</a> </h4>
+                                <p class="description">Daily rate : Rs. 5000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 110,330.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 49.50</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="section-title">
+                            <p>PREMIUM CARS</p>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Toyota%20Corolla%20Axio%20NZE141.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Toyota Corolla Axio/ NZE141</a> </h4>
+                                <p class="description">Daily rate : Rs. 5500.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 120,330.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 49.50</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Perodua%20Bezza%20Prime%20Sedan.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Perodua Bezza Prime Sedan</a> </h4>
+                                <p class="description">Daily rate : Rs. 5500.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 120,330.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 49.50</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Toyota%20Allion%20NZT%20260.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Toyota Allion NZT 260</a> </h4>
+                                <p class="description">Daily rate : Rs. 5800.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 155,760.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 60.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Toyota%20Axio%20NKR%20165.png" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Totoya Axio NKR 165</a> </h4>
+                                <p class="description">Daily rate : Rs. 6000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 175,230.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 65.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="section-title">
+                            <p>LUXURY CARS</p>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" id="luxury1">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Toyota%20Premio.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Totoya Pemio</a> </h4>
+                                <p class="description">Daily rate : Rs. 10000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 227,150.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 85.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" id="luxury2">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/Mercedes.jpeg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">Mercedes</a> </h4>
+                                <p class="description">Daily rate : Rs. 18000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 300,000.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 100.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" id="luxury3">
+                            <div class="icon-box">
+                                <img src="../assets/img/cars/BMW%20i8.jpg" style="width: 100%">
+                                <div class="icon"><i class="bx bxl-world"></i> </div>
+                                <h4 class="title"><a href="">BMW i8</a> </h4>
+                                <p class="description">Daily rate : Rs. 18000.00</p>
+                                <p class="description">Free KM for a day : 100</p>
+                                <p class="description">Monthly rate : Rs. 300,000.00</p>
+                                <p class="description">Free KM for a month : 2400</p>
+                                <p class="description">Price per extra KM : Rs. 100.00</p>
+                                <p class="description">Transmission : Auto</p>
+                                <br>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginForm" aria-controls="staticBackdrop">BOOK NOW</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+    </section>
+</main>
 </body>
 </html>
