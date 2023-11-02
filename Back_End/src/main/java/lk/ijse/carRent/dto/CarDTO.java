@@ -1,5 +1,8 @@
 package lk.ijse.carRent.dto;
 
+import lk.ijse.carRent.embedded.CarImage;
+import lk.ijse.carRent.embedded.Mileage;
+import lk.ijse.carRent.embedded.PriceRate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
