@@ -1,5 +1,6 @@
 package lk.ijse.carRent.config;
 
+import lk.ijse.carRent.service.impl.CarServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
