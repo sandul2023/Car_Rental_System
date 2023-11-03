@@ -1,7 +1,7 @@
 package lk.ijse.carRent.dto;
 
-import com.easy.car_rental.enums.RentRequest;
-import com.easy.car_rental.enums.RequestType;
+import lk.ijse.carRent.enums.RentRequest;
+import lk.ijse.carRent.enums.RequestType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

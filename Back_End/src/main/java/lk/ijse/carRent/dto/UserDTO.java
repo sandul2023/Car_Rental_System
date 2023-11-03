@@ -1,6 +1,6 @@
 package lk.ijse.carRent.dto;
 
-import com.easy.car_rental.enums.RoleType;
+import lk.ijse.carRent.enums.RoleType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;

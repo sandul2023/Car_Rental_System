@@ -1,31 +1,34 @@
 package lk.ijse.carRent.entity;
 
+import lk.ijse.carRent.embedded.Name;
+import lk.ijse.carRent.enums.AvailabilityType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-
+import javax.persistence.*;
+@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @ToString
-@Entity
 public class Driver {
     @Id
-    private String driverId;
-    private String name;
+    private String user_Id;
+
+    @Embedded
+    private Name name;
+    private String contact_No;
     private String address;
-    private String contactNumber;
-    private String nic;
-    private String licenseNo;
-    private String licenseImage;
-    private String availabilityType;
+    private String email;
+    private String nic_No;
+    private String license_No;
+    private String license_Img;
+    @Enumerated(EnumType.STRING)
+    private AvailabilityType driverAvailability;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private UserCredentials userCredentials;
+    private User user;
+
 }

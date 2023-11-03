@@ -1,6 +1,6 @@
 package lk.ijse.carRent.dto;
 
-import com.easy.car_rental.embeded.Name;
+import lk.ijse.carRent.embedded.Name;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

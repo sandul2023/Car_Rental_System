@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Embeddable;
-
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @ToString
-@Embeddable
-public class Mileage {
-    private int dailyMileage;
-    private int monthlyMileage;
+public class Image {
+    private String front_View;
+    private String back_View;
+    private String side_View;
+    private String interior;
 }

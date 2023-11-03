@@ -6,13 +6,12 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Embeddable;
-
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @ToString
-@Embeddable
-public class PriceRate {
-    private int dailyMileage;
-    private int monthlyMileage;
+public class Name {
+    String firstName;
+    String lastName;
 }

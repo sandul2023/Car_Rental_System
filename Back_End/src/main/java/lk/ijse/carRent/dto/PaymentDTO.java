@@ -1,6 +1,6 @@
 package lk.ijse.carRent.dto;
 
-import com.easy.car_rental.enums.PaymentType;
+import lk.ijse.carRent.enums.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

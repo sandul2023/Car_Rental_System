@@ -1,11 +1,11 @@
 package lk.ijse.carRent.dto;
 
-import com.easy.car_rental.embeded.ImageDTO;
-import com.easy.car_rental.embeded.Rate;
-import com.easy.car_rental.enums.AvailabilityType;
-import com.easy.car_rental.enums.CarType;
-import com.easy.car_rental.enums.FuelType;
-import com.easy.car_rental.enums.TransmissionType;
+import lk.ijse.carRent.embedded.ImageDTO;
+import lk.ijse.carRent.embedded.Rate;
+import lk.ijse.carRent.enums.AvailabilityType;
+import lk.ijse.carRent.enums.CarType;
+import lk.ijse.carRent.enums.FuelType;
+import lk.ijse.carRent.enums.TransmissionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

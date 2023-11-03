@@ -1,27 +1,31 @@
-package lk.ijse.carRent.dto;
+package lk.ijse.carRent.entity;
 
 import lk.ijse.carRent.embedded.Name;
-import lk.ijse.carRent.enums.AvailabilityType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class DriverDTO {
+public class Reg_User {
+    @Id
     private String user_Id;
+
+    @Embedded
     private Name name;
     private String contact_No;
     private String address;
     private String email;
-    private String nic_No;
+    private String nic;
     private String license_No;
-    private MultipartFile license_Img;
-    private AvailabilityType driverAvailability;
+    private String nic_Img;
+    private String license_Img;
 
-    private UserDTO user;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    private User user;
 }
