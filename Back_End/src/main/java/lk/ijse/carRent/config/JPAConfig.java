@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = {CarRepo.class})
+@EnableJpaRepositories(basePackages = "lk.ijse.carRent.repo")
 @PropertySource("classpath:application.properties")
 public class JPAConfig {
     @Autowired

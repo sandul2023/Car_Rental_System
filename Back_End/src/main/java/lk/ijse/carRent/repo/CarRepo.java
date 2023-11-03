@@ -1,5 +1,6 @@
 package lk.ijse.carRent.repo;
 
+import lk.ijse.carRent.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -9,27 +10,27 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 public interface CarRepo extends JpaRepository<Car, String> {
-    @Modifying
-    @Transactional
-    @Query(value = "UPDATE Car SET front=:front,back=:back,side=:side,interior=:interior WHERE carId=:carId", nativeQuery = true)
-    void uploadCarImages(@Param("carId") String carId, @Param("front") String front, @Param("back") String back, @Param("side") String side, @Param("interior") String interior);
+    @Query(value = "SELECT car_Id FROM Car ORDER BY car_Id DESC LIMIT 1", nativeQuery = true)
+    String getLastIndex();
 
-    @Query(nativeQuery = true, value = "SELECT * FROM Car GROUP BY brand")
-    ArrayList<Car> getAllCarsSortFromBrand();
+    @Query(value = "SELECT COUNT(car_Id) FROM Car", nativeQuery = true)
+    int getSumCar();
 
-    @Query(nativeQuery = true, value = "SELECT * FROM Car WHERE type=:type GROUP BY brand")
-    ArrayList<Car> getAllCarsFromCarType(@Param("type")String carType);
+    @Query(value = "SELECT COUNT(car_Id) FROM Car WHERE vehicleAvailabilityType='AVAILABLE';", nativeQuery = true)
+    int getSumAvailableCar();
 
-    Long countCarByBrandAndAvailabilityType(String brand, String availabilityType);
+    @Query(value = "SELECT COUNT(car_Id) FROM Car WHERE vehicleAvailabilityType='UNAVAILABLE';", nativeQuery = true)
+    int getSumReservedCar();
 
-    Car findCarByCarId(String carId);
+    @Query(value = "SELECT COUNT(car_Id) FROM Car WHERE vehicleAvailabilityType='MAINTAIN';", nativeQuery = true)
+    int getSumMaintainCar();
 
-    @Query(nativeQuery = true, value = "SELECT COUNT(carId) FROM Car WHERE availabilityType='Unavailable'")
-    int getReservedCarCount();
+    @Query(value = "SELECT COUNT(car_Id) FROM Car WHERE vehicleAvailabilityType='UNDER_MAINTAIN';", nativeQuery = true)
+    int getSumUnderMaintainCar();
 
-    @Query(nativeQuery = true, value = "SELECT COUNT(carId) FROM Car WHERE availabilityType='Need Maintenance'")
-    int getNeedToMaintenanceCarCount();
+    @Query(value = "SELECT * FROM Car WHERE type =?1 and fuel_Type=?2 and vehicleAvailabilityType='AVAILABLE' ", nativeQuery = true)
+    ArrayList<Car> filterCar(String type, String fuel_Type);
 
-    @Query(nativeQuery = true, value = "SELECT COUNT(carId) FROM Car WHERE availabilityType='Under Maintenance'")
-    int getUnderMaintenanceCarCount();
+    @Query(value = "SELECT * FROM Car WHERE name=?1 or fuel_Type=?2 and type=?3 and transmission_Type=?4 and vehicleAvailabilityType='AVAILABLE'", nativeQuery = true)
+    ArrayList<Car> filterCarDetails(String name, String fuel_Type,String type, String transmission_Type);
 }

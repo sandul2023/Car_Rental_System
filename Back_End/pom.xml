@@ -117,12 +117,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.11.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.ubirch.util</groupId>
-            <artifactId>responseutil_2.11</artifactId>
-            <version>0.1</version>
-            <scope>compile</scope>
-        </dependency>
+
     </dependencies>
     <build>
         <plugins>

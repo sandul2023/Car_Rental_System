@@ -1,20 +1,25 @@
 package lk.ijse.carRent.service;
 
+import lk.ijse.carRent.dto.CarDTO;
+import lk.ijse.carRent.dto.CustomDTO;
+import lk.ijse.carRent.embedded.ImageDTO;
+import lk.ijse.carRent.entity.Car;
+
 import java.util.ArrayList;
 
 public interface CarService {
-    void saveCar(CarDTO carDTO);
-    void updateCar(CarDTO carDTO);
-    void deleteCar(String carId);
-    ArrayList<CarDTO> getAllCars();
-    ArrayList<CarDTO> getAllCarsSortFromBrand();
-    ArrayList<CarDTO> getAllCarsFromCarType(String carType);
-    void uploadCarImages(String carId, String frontImage, String backImage, String sideImage, String interiorImage);
-    ImageDTO getCarImages(String carId);
-    Long getCarCountByCarBrandAndAvailability(String carBrand, String availabilityType);
-    CarDTO getCarFromCarId(String carID);
-    int getAvailableCarCount();
-    int getReservedCarCount();
-    int getNeedToMaintenanceCarCount();
-    int getUnderMaintenanceCarCount();
+    void saveCar(CarDTO dto);
+    void updateCar(CarDTO dto);
+    void deleteCar(String car_Id);
+    ArrayList<CarDTO> getAllCar();
+    CustomDTO carIdGenerate();
+    Car searchCarId(String id);
+    CustomDTO getSumCar();
+    CustomDTO getSumAvailableCar();
+    CustomDTO getSumReservedCar();
+    CustomDTO getSumMaintainCar();
+    CustomDTO getSumUnderMaintainCar();
+    ArrayList<CarDTO> getFilerData(String type,String fuelType);
+    ArrayList<CarDTO> filterCarDetails(String name, String fuel_Type,String type, String transmission_Type);
+
 }
