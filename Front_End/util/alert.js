@@ -1,7 +1,3 @@
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
 
 function saveUpdateAlert(vale, value2) {
     Swal.fire({
