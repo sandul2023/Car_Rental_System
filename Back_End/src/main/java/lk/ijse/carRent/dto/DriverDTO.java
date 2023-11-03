@@ -1,22 +1,27 @@
 package lk.ijse.carRent.dto;
 
+import com.easy.car_rental.embeded.Name;
+import com.easy.car_rental.enums.AvailabilityType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
+import org.springframework.web.multipart.MultipartFile;
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @ToString
 public class DriverDTO {
-    private String driverId;
-    private String name;
+    private String user_Id;
+    private Name name;
+    private String contact_No;
     private String address;
-    private String contactNumber;
-    private String nic;
-    private String licenseNo;
-    private String licenseImage;
-    private String availabilityType;
-    private UserCredentialsDTO userCredentials;
+    private String email;
+    private String nic_No;
+    private String license_No;
+    private MultipartFile license_Img;
+    private AvailabilityType driverAvailability;
+
+    private UserDTO user;
+
 }

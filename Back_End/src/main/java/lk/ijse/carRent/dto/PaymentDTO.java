@@ -1,5 +1,6 @@
 package lk.ijse.carRent.dto;
 
+import com.easy.car_rental.enums.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,15 +11,17 @@ import java.time.LocalTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @ToString
+@Data
 public class PaymentDTO {
-    private String paymentId;
-    private String paymentType;
-    private LocalDate paymentDate;
-    private LocalTime paymentTime;
-    private double amount;
-    private double cash;
-    private double balance;
-    private RentDTO rent;
+
+    private String paymentID;
+    private RentDTO rentID;
+    private PaymentType paymentType;
+    private LocalDate date;
+    private LocalTime time;
+    private Double lostDamage;
+    private Double rentFee;
+    private Double driverFee;
+    private Double total;
 }

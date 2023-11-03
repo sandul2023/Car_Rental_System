@@ -1,8 +1,5 @@
 package lk.ijse.carRent.service;
 
-import lk.ijse.carRent.dto.CarDTO;
-import lk.ijse.carRent.dto.ImageDTO;
-
 import java.util.ArrayList;
 
 public interface CarService {
