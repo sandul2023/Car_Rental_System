@@ -2,7 +2,7 @@ package lk.ijse.carRent.service;
 
 import lk.ijse.carRent.dto.CarDTO;
 import lk.ijse.carRent.dto.CustomDTO;
-import lk.ijse.carRent.embedded.ImageDTO;
+import lk.ijse.carRent.embeded.ImageDTO;
 import lk.ijse.carRent.entity.Car;
 
 import java.util.ArrayList;

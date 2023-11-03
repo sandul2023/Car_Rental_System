@@ -4,7 +4,7 @@ import lk.ijse.carRent.dto.CustomDTO;
 import lk.ijse.carRent.util.ResponseUtil;
 import lk.ijse.carRent.dto.DriverDTO;
 import lk.ijse.carRent.dto.UserDTO;
-import lk.ijse.carRent.embedded.Name;
+import lk.ijse.carRent.embeded.Name;
 import lk.ijse.carRent.entity.Driver;
 import lk.ijse.carRent.service.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;

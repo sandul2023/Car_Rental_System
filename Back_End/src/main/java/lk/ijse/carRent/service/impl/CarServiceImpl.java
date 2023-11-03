@@ -2,8 +2,8 @@ package lk.ijse.carRent.service.impl;
 
 import lk.ijse.carRent.dto.CarDTO;
 import lk.ijse.carRent.dto.CustomDTO;
-import lk.ijse.carRent.embedded.Image;
-import lk.ijse.carRent.embedded.ImageDTO;
+import lk.ijse.carRent.embeded.Image;
+import lk.ijse.carRent.embeded.ImageDTO;
 import lk.ijse.carRent.entity.Car;
 import lk.ijse.carRent.enums.CarType;
 import lk.ijse.carRent.enums.FuelType;

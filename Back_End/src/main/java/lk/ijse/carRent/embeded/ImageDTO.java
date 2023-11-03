@@ -1,4 +1,4 @@
-package lk.ijse.carRent.embedded;
+package lk.ijse.carRent.embeded;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +7,8 @@ import lombok.ToString;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.Embeddable;
+
+
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
